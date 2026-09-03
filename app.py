@@ -59,12 +59,11 @@ st.session_state['dataset'] = load_shared_dataset()
 # Native Streamlit Multi-Page Navigation Setup
 pages = [
     st.Page("pages/welcome.py", title="Welcome & Overview", default=True),
-    st.Page("pages/home_prediction.py", title="Prediction Engine"),
-    st.Page("pages/analytics_dashboard.py", title="Analytics Dashboard"),
     st.Page("pages/about_platform.py", title="About Platform"),
-    st.Page("pages/guide.py", title="User Guide")
+    st.Page("pages/analytics_dashboard.py", title="Analytics Dashboard"),
+    st.Page("pages/guide.py", title="User Guide"),
+    st.Page("pages/home_prediction.py", title="Prediction Engine")
 ]
-
 pg = st.navigation(pages, position="sidebar")
 
 # Render system status metadata in the persistent sidebar footer
