@@ -59,7 +59,7 @@ st.session_state['dataset'] = load_shared_dataset()
 # Native Streamlit Multi-Page Navigation Setup
 pages = [
     st.Page("pages/welcome.py", title="Welcome & Overview", default=True),
-    st.Page("pages/home_prediction.py", title="Prediction Engine",  default=True),
+    st.Page("pages/home_prediction.py", title="Prediction Engine"),
     st.Page("pages/analytics_dashboard.py", title="Analytics Dashboard"),
     st.Page("pages/about_platform.py", title="About Platform"),
     st.Page("pages/guide.py", title="User Guide")
@@ -74,7 +74,7 @@ with st.sidebar:
     if st.session_state['model'] is not None:
         st.success("🟢 Model Active & Healthy")
     else:
-        st.error("🔴 Artifacts Missing")
+      st.error("🔴 Artifacts Missing")
     st.markdown(
         "<div style='text-align: center; color: #64748b; font-size: 12px; margin-top: 15px;'>"
         "Scholarship Intelligence v2.0<br>© 2026 Enterprise Edition"
